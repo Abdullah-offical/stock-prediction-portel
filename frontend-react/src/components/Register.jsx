@@ -1,11 +1,12 @@
 import React, {useState}  from 'react'
+import axios from 'axios'
 
 const Register = () => {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleRegistration = (e) => {
+    const handleRegistration = async (e) => {
         e.preventDefault()
         // Perform registration logic here
         const userData = {
@@ -13,7 +14,16 @@ const Register = () => {
             email,
             password
         }
-        console.log(userData)
+        // console.log(userData)
+        try{
+            const response = await axios.post('http://localhost:8000/api/v1/register/', userData)
+            console.log(response.data)
+            console.log("Registration successful")
+        }catch(error) {
+            console.log("Registration failed")
+            console.log(error.response.data)
+        };
+        
         
     }
   return (
@@ -24,13 +34,13 @@ const Register = () => {
                 <h3 className='text-light text-center mb-4'>Create an Account</h3>
                 <form onSubmit={handleRegistration}>
                   <div className='mb-3'>
-                    <input type="text" className='form-control' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)}/>
+                  <input type="text" className='form-control' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)} />
                   </div>
                     <div className='mb-3'>
-                      <input type="email" className='form-control' placeholder='Email address' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    <input type="email" className='form-control' placeholder='Email address' value={email} onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div className='mb-3'>
-                    <input type="password" className='form-control ' placeholder='Set password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    <input type="password" className='form-control ' placeholder='Set password' value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>    
                       <button type='submit' className='btn btn-info d-block mx-auto'>Register</button>
                 </form>

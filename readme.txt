@@ -20,3 +20,12 @@ set header and footer for all pages
             npm i react-router-dom
 
 Create registraiont form 
+use state state to register user
+
+send the user data object with the api endpoint to  axios
+    npm i axios  
+    #pkg install
+
+    been blocked by CORS policy to fix this issue for one domine to send the user data another domine
+    django-cors-headers
+    pip install django-cors-headers

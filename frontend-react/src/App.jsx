@@ -12,8 +12,8 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
-     <Header />
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <Header />
       <Routes>
         <Route path='/' element={<Main />}/>
         <Route path='/register' element={<Register />}/>
