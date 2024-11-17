@@ -37,3 +37,9 @@ font awesome react isntall and set
 npm i --save @fortawesome/fontawesome-svg-core
 npm install --save @fortawesome/free-solid-svg-icons
 npm install --save @fortawesome/react-fontawesome
+
+set login setup 
+install jwt
+pip install djangorestframework-simplejwt
+use documentations
+set setings and apis
