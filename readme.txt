@@ -29,3 +29,11 @@ send the user data object with the api endpoint to  axios
     been blocked by CORS policy to fix this issue for one domine to send the user data another domine
     django-cors-headers
     pip install django-cors-headers
+
+set errors
+success message
+loading button 
+font awesome react isntall and set 
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
