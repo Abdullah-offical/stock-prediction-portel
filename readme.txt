@@ -43,3 +43,5 @@ install jwt
 pip install djangorestframework-simplejwt
 use documentations
 set setings and apis
+
+login and logout functionilities
