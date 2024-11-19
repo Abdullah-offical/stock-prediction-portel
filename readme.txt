@@ -45,3 +45,14 @@ use documentations
 set setings and apis
 
 login and logout functionilities
+
+// # backend 
+"ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    set access token 
+
+frontend function
+
+http://127.0.0.1:8000/api/v1/protected-view/
+
+check to this rout post main in authentions barirore

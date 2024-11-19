@@ -48,7 +48,7 @@ const Login = () => {
                   </div>
                     
                     <div className='mb-3'>
-                    <input type="password" className='form-control ' placeholder='Set password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <input type="password" className='form-control ' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     
                     {error && <div className='text-danger'>{error}</div> }
