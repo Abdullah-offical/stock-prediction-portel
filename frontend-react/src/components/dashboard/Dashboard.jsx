@@ -2,17 +2,13 @@ import {useEffect, useState} from 'react'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import axiosInstance from '../../axiosInstance'
 
 const Dashboard = () => {
-  const accessToken = localStorage.getItem('accessToken')
   useEffect(() => {
     const fatchProtectedData = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/v1/protected-view/', {
-          headers: {
-            'Authorization': `Bearer ${accessToken}`
-          }
-        }) 
+        const response = await axiosInstance.get('/protected-view/') 
         console.log('Protected data:', response.data)
       }catch (error) {
         console.error("Error finding" ,error)
